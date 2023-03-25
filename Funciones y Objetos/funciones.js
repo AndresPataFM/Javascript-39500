@@ -38,12 +38,12 @@ function calculadora(a,b,operacion){
     }
 }
 
-calculadora(2,3,"-")
-calculadora(4,3,"-")
-calculadora(5,6,"+")
-calculadora(2,3,"-")
-calculadora(2,123,"+")
-calculadora(5402,34,"-")
+// calculadora(2,3,"-")
+// calculadora(4,3,"-")
+// calculadora(5,6,"+")
+// calculadora(2,3,"-")
+// calculadora(2,123,"+")
+// calculadora(5402,34,"-")
 
 function tablaMultiplicacion(num1){
     for(let i = 0; i<=num1; i++){
@@ -102,7 +102,7 @@ const ataqueEspada = (defensa,danio)=>{
         alert("Le erraste")
     }
 }
-ataqueEspada(10, 10)
+// ataqueEspada(10, 10)
 
 // return implicito
 // const nombre = (parametros) => // código a retornar
@@ -142,3 +142,39 @@ const divisibleEnTres = num1 => num1%3===0
 
 // Caja Negra: ver los datos que ingresan y los datos que salen
 // Caja Blanca: ver el proceso independientemente del input
+
+// valores predeterminados
+
+const division = (num1, num2=5) => num1/num2
+
+
+// Elijamos el más grande de 5 numeros
+const retornaMasGrande = (num1,num2)=>{
+    if(num1>=num2){
+        return num1
+    } else {
+        return num2
+    }
+}
+
+const elegirMasGrande5=()=>{
+    // Valor más grandre
+    let masgrande = 0
+
+    // 5 numeros que ingresa el usuario
+    let primero = Number(prompt("Ingrese el primer número"))
+    let segundo = Number(prompt("Ingrese el segundo número"))
+    let tercero = Number(prompt("Ingrese el tercer número"))
+    let cuarto = Number(prompt("Ingrese el cuarto número"))
+    let quinto = Number(prompt("Ingrese el quinto número"))
+
+    // comparo y elijo el más grande
+    masgrande = retornaMasGrande(primero, segundo)
+    masgrande = retornaMasGrande(masgrande, tercero)
+    masgrande = retornaMasGrande(masgrande, cuarto)
+    masgrande = retornaMasGrande(masgrande, quinto)
+
+    alert(masgrande)
+}
+
+// elegirMasGrande5()
