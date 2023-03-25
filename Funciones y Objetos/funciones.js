@@ -177,4 +177,16 @@ const elegirMasGrande5=()=>{
     alert(masgrande)
 }
 
+const mayor5EnterosPositivos = ()=>{
+    let mayor = 0
+    for(let i=0; i<5; i++){
+        let comparar = Number(prompt("Ingrese número mayor o igual a 0"))
+        while(comparar<0){
+            comparar = Number(prompt("Ingrese número mayor o igual a 0"))
+        }
+        mayor = retornaMasGrande(mayor, comparar)
+    }
+    alert(mayor)
+}
+
 // elegirMasGrande5()
