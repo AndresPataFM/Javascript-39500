@@ -59,18 +59,18 @@ const examen = ()=>{
         
     }
     // esto puede ser su propia funcion que llamo 5 veces
-    let preg1 = Number(promt("Cuánto es 5*8"))
+    let preg1 = Number(prompt("Cuánto es 5*8"))
     corrector(5,8, "*", preg1)
-    let preg2 = Number(promt("Cuánto es 3+4"))
+    let preg2 = Number(prompt("Cuánto es 3+4"))
     corrector(3,4, "+", preg2)
-    let preg3 = Number(promt("Cuánto es 13*2"))
+    let preg3 = Number(prompt("Cuánto es 13*2"))
     corrector(13,2, "*", preg3)
-    let preg4 = Number(promt("Cuánto es 100/4"))
+    let preg4 = Number(prompt("Cuánto es 100/4"))
     corrector(100,4, "/", preg4)
-    let preg5 = Number(promt("Cuánto es 10-3"))
+    let preg5 = Number(prompt("Cuánto es 10-3"))
     corrector(10,3, "-", preg5)
 
-    alert(`Su nota es: ${nota}`)
+    alert(`Su nota es: ${nota}/10`)
 }
 
 const preguntaSeleccion=()=>{
