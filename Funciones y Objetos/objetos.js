@@ -162,4 +162,37 @@ for(propiedad in michifus){
 // Si queda tiempo extends + super en clases
 
 
-// actividad
+
+// Ejemplos
+
+const soyUnObjeto = {
+    prop1: 2,
+    prop2: "hola",
+    prop3: {/*objeto*/},
+    metodo1: ()=>{console.log("hola mundo")}
+}
+
+// func constructoras
+
+const funcConstr = (a, b, c)=>{
+    this.prop1 = a
+    this.prop2 = b
+    this.prop3 = c
+}
+
+const nuevoObj = new funcConstr(1,2,3)
+/* nueboObj = {
+    prop1:1,
+    prop2:2,
+    prop3:3
+}*/
+
+class producto{
+    constructor(a,b,c){
+        this.prop1 = a
+        this.prop2 = b
+        this.prop3 = c
+        this.tipo = "objeto"
+        this.holaMundo = ()=>{console.log("hola mundo")}
+    }
+}
