@@ -13,18 +13,18 @@ const productosBase = [
     {name:"Alimento Gato Joven", id:"004", type:"Medicinal", price:4530, stock:18, description:"Alimento para gatos Kitten de Royal Canin"}
 ]
 
+// OR lógico para cargar local storage
 let carrito = JSON.parse(localStorage.getItem("carrito"))|| []
-// meterlo en local storage de alguna manera
+
 
 
 const totalCarritoRender = ()=>{
+    // se encarga de calcular el total del carrito
     const carritoTotal = document.getElementById("carritoTotal")
     let total = carrito.reduce((acumulador, {price, quantity})=>{
         return acumulador + (price*quantity)
     }, 0)
     carritoTotal.innerHTML=`Precio total: $ ${total}`
-    let carritoString = JSON.stringify(carrito)
-    localStorage.setItem("carrito", carritoString)
 }
 
 const agregarCarrito = (objetoCarrito)=>{
@@ -56,6 +56,8 @@ const renderizarCarrito = ()=>{
             localStorage.setItem("carrito", carritoString)
             renderizarCarrito()
         })
+        let carritoString = JSON.stringify(carrito)
+        localStorage.setItem("carrito", carritoString)
     })
 }
 
@@ -108,6 +110,7 @@ const renderizarProductos = ()=>{
 
 
 const finalizarCompra = ()=>{
+    // Borra el array y le da un mensaje al usuario
     borrarCarrito()
     let mensaje = document.getElementById("carritoTotal")
     mensaje.innerHTML = "Muchas gracias por su compra, los esperamos pronto"
